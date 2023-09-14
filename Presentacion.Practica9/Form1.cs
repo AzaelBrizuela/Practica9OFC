@@ -57,5 +57,19 @@ namespace Presentacion.Practica9
         {
             Close();
         }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            Eliminar();
+            LlenarDatos();
+        }
+        private void Eliminar()
+        {
+            if (MessageBox.Show("estas segur@ que Deseas eliminar a este Producto", "Eliminar Producto", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                var idproducto = int.Parse(dtgDatosTabla.CurrentRow.Cells["id"].Value.ToString());
+                _productoslogica.EliminarProducto(idproducto);
+            }
+        }
     }
 }
