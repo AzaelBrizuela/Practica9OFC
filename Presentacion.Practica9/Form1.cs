@@ -52,5 +52,10 @@ namespace Presentacion.Practica9
             txtDescripcion.Text = "";
             txtPrecio.Text = "";
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
