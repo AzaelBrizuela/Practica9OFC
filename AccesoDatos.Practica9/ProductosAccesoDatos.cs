@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Entidades.Practica9;
 using AccesoDatos.Practica9;
 
-namespace AccesoDatos.Tienda
+namespace AccesoDatos.Practica9
 {
     public class ProductosAccesoDatos
     {

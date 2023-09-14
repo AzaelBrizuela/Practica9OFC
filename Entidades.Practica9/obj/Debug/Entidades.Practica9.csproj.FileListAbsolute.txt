@@ -1,0 +1,6 @@
+C:\Users\azael\source\repos\Practica9\Entidades.Practica9\bin\Debug\Entidades.Practica9.dll
+C:\Users\azael\source\repos\Practica9\Entidades.Practica9\bin\Debug\Entidades.Practica9.pdb
+C:\Users\azael\source\repos\Practica9\Entidades.Practica9\obj\Debug\Entidades.Practica9.csproj.AssemblyReference.cache
+C:\Users\azael\source\repos\Practica9\Entidades.Practica9\obj\Debug\Entidades.Practica9.csproj.CoreCompileInputs.cache
+C:\Users\azael\source\repos\Practica9\Entidades.Practica9\obj\Debug\Entidades.Practica9.dll
+C:\Users\azael\source\repos\Practica9\Entidades.Practica9\obj\Debug\Entidades.Practica9.pdb

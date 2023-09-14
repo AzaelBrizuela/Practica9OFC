@@ -1,0 +1,2 @@
+C:\Users\azael\source\repos\Practica9\Practica9\obj\Debug\Practica9.csproj.AssemblyReference.cache
+C:\Users\azael\source\repos\Practica9\Practica9\obj\Debug\Practica9.csproj.CoreCompileInputs.cache
