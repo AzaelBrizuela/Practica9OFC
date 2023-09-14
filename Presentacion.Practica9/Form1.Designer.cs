@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dtgDatosTabla = new System.Windows.Forms.DataGridView();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatosTabla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,15 +50,7 @@
             this.dtgDatosTabla.Name = "dtgDatosTabla";
             this.dtgDatosTabla.Size = new System.Drawing.Size(463, 165);
             this.dtgDatosTabla.TabIndex = 0;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Location = new System.Drawing.Point(168, 244);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnActualizar.TabIndex = 1;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.dtgDatosTabla.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDatosTabla_CellDoubleClick);
             // 
             // btnBorrar
             // 
@@ -147,6 +139,16 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(168, 244);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.TabIndex = 1;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,7 +180,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dtgDatosTabla;
-        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label1;
@@ -189,6 +190,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }
 

@@ -73,8 +73,8 @@ namespace AccesoDatos.Practica9
         }
         public void ActualizarProductos(Productos nuevoproducto)
         {
-            string consulta = string.Format("update datos_producto_ set nombre='{0}',descripcion='{1}',precio='{2}'",
-                                            nuevoproducto.Nombre, nuevoproducto.Descripcion, nuevoproducto.Precio);
+            string consulta = string.Format("update datos_producto_ set nombre='{0}',descripcion='{1}',precio='{2}' where id_producto ='{3}'; ",
+                                            nuevoproducto.Nombre, nuevoproducto.Descripcion, nuevoproducto.Precio, nuevoproducto.Id);
             conexion.EjecutarConsulta(consulta);
         }
     }

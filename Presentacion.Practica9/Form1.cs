@@ -14,6 +14,7 @@ namespace Presentacion.Practica9
 {
     public partial class Form1 : Form
     {
+        private int idproducto = 0;
         private ProductosLogica _productoslogica;
         public Form1()
         {
@@ -70,6 +71,37 @@ namespace Presentacion.Practica9
                 var idproducto = int.Parse(dtgDatosTabla.CurrentRow.Cells["id"].Value.ToString());
                 _productoslogica.EliminarProducto(idproducto);
             }
+        }
+
+        private void dtgDatosTabla_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtNombre.Text = dtgDatosTabla.CurrentRow.Cells["nombre"].Value.ToString();
+            txtDescripcion .Text = dtgDatosTabla.CurrentRow.Cells["descripcion"].Value.ToString();
+            txtPrecio.Text = dtgDatosTabla.CurrentRow.Cells["precio"].Value.ToString();
+            idproducto = int.Parse(dtgDatosTabla.CurrentRow.Cells["id"].Value.ToString());
+        }
+        private void ModificacionProductos()
+        {
+            Productos nuevoproducto = new Productos();
+            nuevoproducto.Id = idproducto;
+            nuevoproducto.Nombre = txtNombre .Text;
+            nuevoproducto.Descripcion = txtDescripcion.Text;
+            nuevoproducto.Precio = double.Parse(txtPrecio.Text);
+            var validar = _productoslogica.ValidarProductos(nuevoproducto);
+            if (validar.Item1)
+            {
+                _productoslogica.ActualizarProductos(nuevoproducto);
+                LlenarDatos();
+                LimpiarTexto ();
+                txtNombre.Focus();
+            }
+            else
+                MessageBox.Show(validar.Item2, "Error de Campos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ModificacionProductos();
         }
     }
 }
